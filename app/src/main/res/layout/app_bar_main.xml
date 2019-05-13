@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <include
+            android:id="@+id/include_content"
+            layout="@layout/content_main" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="50dp"
+            android:text="ffffffffffffffffffff"/>
+    </FrameLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextColor="#000000"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabIndicatorColor="@color/colorPrimary">
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/bottom_nav_main"/>
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/bottom_nav_food_group"/>
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/bottom_nav_food_mate"/>
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/bottom_nav_food_board"/>
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/bottom_nav_settings"/>
+    </android.support.design.widget.TabLayout>
+</android.support.design.widget.CoordinatorLayout>
