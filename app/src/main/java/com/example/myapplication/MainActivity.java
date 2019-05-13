@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.TableLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -46,29 +47,22 @@ public class MainActivity extends AppCompatActivity
 
         // TabLayout 초기화
         // 화면 아래 버튼들
-        TabLayout tabLayout = findViewById(R.id.layout_tab);
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        final TabLayout tabLayout = findViewById( R.id.layout_tab );
+        tabLayout.addOnTabSelectedListener( new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
+            public void onTabSelected( TabLayout.Tab tab ) {
                 int pos = tab.getPosition();
-                View v1 = findViewById(R.id.include_content);
-                View v2 = findViewById(R.id.text);
-                v1.setVisibility(View.INVISIBLE);
-                v2.setVisibility(View.INVISIBLE);
-                switch(pos){
-                    case 0:  // 메인 탭 선택
-                        v1.setVisibility(View.VISIBLE);
-                        break;
-                    case 1: // FOOD GROUP 탭 선택
-                        v2.setVisibility(View.VISIBLE);
-                        break;
-                    case 2: // FOOD MATE 탭 선택
-                        break;
-                    case 3: // 맛집 게시판 탭 선택
-                        break;
-                    case 4: // 설정 탭 선택
-                        break;
-                }
+                View tabLayouts[] = {
+                        findViewById( R.id.include_content ),
+                        findViewById( R.id.text )
+                };
+
+                for( int i = 0; i < tabLayouts.length; i++)
+                    tabLayouts[ i ].setVisibility( View.INVISIBLE );
+
+                if( pos < tabLayouts.length )
+                    tabLayouts[ pos ].setVisibility( View.VISIBLE );
+
             }
 
             @Override

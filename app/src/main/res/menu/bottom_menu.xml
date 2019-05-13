@@ -3,21 +3,21 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:title="@string/bottom_nav_main" />
+        android:title="@string/bottom_nav_tab1" />
 
     <item
         android:id="@+id/navigation_food_group"
-        android:title="@string/bottom_nav_food_group" />
+        android:title="@string/bottom_nav_tab2" />
 
     <item
         android:id="@+id/navigation_food_mate"
-        android:title="@string/bottom_nav_food_mate" />
+        android:title="@string/bottom_nav_tab3" />
 
     <item
         android:id="@+id/navigation_food_board"
-        android:title="@string/bottom_nav_food_board" />
+        android:title="@string/bottom_nav_tab4" />
 
-    <!--item
+    <item
         android:id="@+id/navigation_settings"
-        android:title="@string/bottom_nav_settings" /-->
+        android:title="@string/bottom_nav_tab5" />
 </menu>

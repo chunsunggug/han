@@ -51,22 +51,22 @@
         <android.support.design.widget.TabItem
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/bottom_nav_main"/>
+            android:text="@string/bottom_nav_tab1"/>
         <android.support.design.widget.TabItem
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/bottom_nav_food_group"/>
+            android:text="@string/bottom_nav_tab2"/>
         <android.support.design.widget.TabItem
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/bottom_nav_food_mate"/>
+            android:text="@string/bottom_nav_tab3"/>
         <android.support.design.widget.TabItem
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/bottom_nav_food_board"/>
+            android:text="@string/bottom_nav_tab4"/>
         <android.support.design.widget.TabItem
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/bottom_nav_settings"/>
+            android:text="@string/bottom_nav_tab5"/>
     </android.support.design.widget.TabLayout>
 </android.support.design.widget.CoordinatorLayout>

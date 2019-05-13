@@ -5,9 +5,9 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="bottom_nav_main">메인</string>
-    <string name="bottom_nav_food_mate">FOOD\nGROUP</string>
-    <string name="bottom_nav_food_group">FOOD\nMATE</string>
-    <string name="bottom_nav_settings">설정</string>
-    <string name="bottom_nav_food_board">맛집\n게시판</string>
+    <string name="bottom_nav_tab1">메인</string>
+    <string name="bottom_nav_tab2">FOOD\nGROUP</string>
+    <string name="bottom_nav_tab3">친구</string>
+    <string name="bottom_nav_tab4">쪽지함</string>
+    <string name="bottom_nav_tab5">맛집\n게시판</string>
 </resources>
