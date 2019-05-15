@@ -22,6 +22,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    int currentLayoutNum = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,18 +52,7 @@ public class MainActivity extends AppCompatActivity
         tabLayout.addOnTabSelectedListener( new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected( TabLayout.Tab tab ) {
-                int pos = tab.getPosition();
-                View tabLayouts[] = {
-                        findViewById( R.id.include_content ),
-                        findViewById( R.id.text )
-                };
-
-                for( int i = 0; i < tabLayouts.length; i++)
-                    tabLayouts[ i ].setVisibility( View.INVISIBLE );
-
-                if( pos < tabLayouts.length )
-                    tabLayouts[ pos ].setVisibility( View.VISIBLE );
-
+                changeCenterLayout( tab.getPosition() );
             }
 
             @Override
@@ -100,28 +90,64 @@ public class MainActivity extends AppCompatActivity
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+
         //int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        //if (id == R.id.action_settings) {
-        //    return true;
-        //}
+
 
         return super.onOptionsItemSelected(item);
     }
 
+    // 드로어 메뉴 선택 시 호출
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        //if (id == R.id.nav_camera) {
-            // Handle the camera action
-        //}
+        switch( id ){
+            case R.id.drawer_foodboard: // 맛집게시판
+                break;
+            case R.id.drawer_itemshop: // 아이템샵
+                break;
+            case R.id.drawer_partycheck: // 주변 맛집 파티 확인
+                break;
+            case R.id.drawer_question: // 1:1 문의
+                break;
+            case R.id.drawer_settings: // 환경설정
+                changeCenterLayout( 5 );
+                break;
+            case R.id.drawer_yakkuan: // 이용약관
+                break;
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void changeCenterLayout( int pos ){
+        // 0~4 번호는 하단탭에 매칭
+        // 5~ 번호부터는 하단탭에 없는 레이아웃 매칭 ex)드로어에 표시된 메뉴에 대한 레이아웃
+        final View tabLayouts[] = {
+                findViewById( R.id.include_content ),
+                findViewById( R.id.text ),
+                null,
+                null,
+                null,
+                findViewById( R.id.include_settings )
+        };
+
+        /*for( int i = 0; i < tabLayouts.length; i++)
+            if( tabLayouts[ i ] != null )
+                tabLayouts[ i ].setVisibility( View.INVISIBLE );*/
+
+        if( pos < tabLayouts.length )
+            if( tabLayouts[ pos ] != null) {
+                tabLayouts[ currentLayoutNum ].setVisibility( View.INVISIBLE );
+                tabLayouts[ pos ].setVisibility( View.VISIBLE );
+                currentLayoutNum = pos;
+            }
     }
 }
