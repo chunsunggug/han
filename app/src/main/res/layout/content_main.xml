@@ -48,19 +48,19 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/subname"
+                        android:id="@+id/textView6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="닉네임" />
 
                     <TextView
-                        android:id="@+id/age"
+                        android:id="@+id/textView7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="나이" />
 
                     <TextView
-                        android:id="@+id/likefood"
+                        android:id="@+id/textView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="좋아하는 음식 종류" />
@@ -71,7 +71,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/nearfind"
+            android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -79,7 +79,7 @@
             android:text="주변 식당 확인하기" />
 
         <ImageView
-            android:id="@+id/mapview"
+            android:id="@+id/imageView6"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             app:srcCompat="@drawable/ic_launcher_background"
