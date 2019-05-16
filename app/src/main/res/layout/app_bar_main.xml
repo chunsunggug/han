@@ -29,13 +29,7 @@
             android:id="@+id/include_content"
             layout="@layout/content_main" />
 
-        <TextView
-            android:visibility="invisible"
-            android:id="@+id/text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="50dp"
-            android:text="ffffffffffffffffffff"/>
+
     </FrameLayout>
 
     <android.support.design.widget.TabLayout
