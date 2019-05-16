@@ -36,6 +36,12 @@
             android:layout_height="match_parent"
             android:textSize="50dp"
             android:text="ffffffffffffffffffff"/>
+
+        <include
+            android:visibility="invisible"
+            android:id="@+id/include_settings"
+            layout="@layout/settings_layout"
+            />
     </FrameLayout>
 
     <android.support.design.widget.TabLayout
