@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class login_2 extends AppCompatActivity {
+public class p2_login extends AppCompatActivity {
 
     ImageView logoimage;
     TextView EtextL;
@@ -28,7 +28,7 @@ public class login_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_2);
+        setContentView(R.layout.p2_activity_login);
 
 
         logoimage  = findViewById(R.id.logoImage);
@@ -49,6 +49,13 @@ public class login_2 extends AppCompatActivity {
         btnEfind = findViewById(R.id.btnEfind);
         btnPfind = findViewById(R.id.btnPfind);
         btnMake  = findViewById(R.id.btnMake);
+        btnMake.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gomakeuser = new Intent(getApplicationContext(),p3_makeuser.class);
+                startActivity(gomakeuser);
+            }
+        });
         btneasyM = findViewById(R.id.btnkakao);
 
 
