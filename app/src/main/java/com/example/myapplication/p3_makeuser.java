@@ -8,7 +8,7 @@ public class p3_makeuser extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.p3_activity_makeuser);
+        setContentView(R.layout.activity_p3_makeuser);
 
 
     }

@@ -28,7 +28,7 @@ public class p2_login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.p2_activity_login);
+        setContentView(R.layout.activity_p2_login);
 
 
         logoimage  = findViewById(R.id.logoImage);
@@ -47,7 +47,21 @@ public class p2_login extends AppCompatActivity {
             }
         });
         btnEfind = findViewById(R.id.btnEfind);
+        btnEfind.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gofindid = new Intent(getApplicationContext(),p4_findid.class);
+                startActivity(gofindid);
+            }
+        });
         btnPfind = findViewById(R.id.btnPfind);
+        btnPfind.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gofidpwd = new Intent(getApplicationContext(),p5_findpwd.class);
+                startActivity(gofidpwd);
+            }
+        });
         btnMake  = findViewById(R.id.btnMake);
         btnMake.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="61dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="43dp"
         android:text="회원가입"
         android:textSize="28dp"
         app:layout_constraintBottom_toTopOf="@+id/bigtable"
@@ -23,8 +23,8 @@
     <TableLayout
         android:id="@+id/bigtable"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="29dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="101dp"
         app:layout_constraintBottom_toTopOf="@+id/proftext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,8 +48,7 @@
                 android:id="@+id/emailid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="12"
-                android:hint="이메일 형식으로 입력해주세요."
+                android:hint="사용하는 이메일을 입력해주세요."
                 android:inputType="textPersonName" />
         </TableRow>
 
@@ -83,10 +82,10 @@
 
             <TextView
                 android:id="@+id/repasswordtext"
-                android:layout_width="0dp"
+                android:layout_width="127dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="비밀번호 확인" />
+                android:text="비번 재확인" />
 
             <EditText
                 android:id="@+id/reemailpwd"
@@ -96,6 +95,29 @@
                 android:hint="비밀번호를 다시 입력해 주세요."
                 android:inputType="textPassword" />
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/realnametext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="이름" />
+
+            <EditText
+                android:id="@+id/realname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:hint="이름을 입력해주세요"
+                android:inputType="textPersonName" />
+        </TableRow>
+
 
         <TableRow
             android:layout_width="match_parent"
@@ -117,6 +139,28 @@
                 android:ems="12"
                 android:hint="닉네임을 입력해주세요."
                 android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/birthdaytext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="생년월일" />
+
+            <EditText
+                android:id="@+id/birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="6"
+                android:hint="생년월일 입력 ex)931230"
+                android:inputType="number" />
         </TableRow>
 
         <TableRow
@@ -214,23 +258,27 @@
         android:id="@+id/proftext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="40dp"
-        android:text="프로필 등록 사진"
-        app:layout_constraintBottom_toTopOf="@+id/makeprofimg"
-        app:layout_constraintStart_toStartOf="@+id/makeprofimg"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="67dp"
+        android:text="프로필 사진 등록"
+        app:layout_constraintBottom_toTopOf="@+id/makeuser"
+        app:layout_constraintEnd_toStartOf="@+id/makeprofimg"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bigtable" />
 
     <ImageView
         android:id="@+id/makeprofimg"
-        android:layout_width="137dp"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginRight="137dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/makeuser"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/proftext"
+        app:layout_constraintStart_toEndOf="@+id/proftext"
         app:srcCompat="@drawable/ic_launcher_background"
         tools:ignore="VectorDrawableCompat" />
 
@@ -244,6 +292,6 @@
         android:text="가입하기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/makeprofimg"
-        app:layout_constraintTop_toBottomOf="@+id/makeprofimg" />
+        app:layout_constraintTop_toBottomOf="@+id/proftext" />
 
 </android.support.constraint.ConstraintLayout>

@@ -13,7 +13,7 @@ public class p1_intromain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.p1_activity_intromain);
+        setContentView(R.layout.activity_p1_intromain);
         ImageView introimg = findViewById(R.id.introimg);
         Button strbtn = findViewById(R.id.strbtn);
         strbtn.setOnClickListener(new View.OnClickListener() {
